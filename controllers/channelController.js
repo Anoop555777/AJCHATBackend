@@ -2,7 +2,7 @@ const catchAsync = require('../utils/catchAsync');
 const Channel = require('../models/channelModel');
 const AppError = require('../utils/appError');
 const User = require('../models/userModel');
-const ChannelMember = require('../models/channelMemberModel');
+const ChannelMember = require('../models/channelmemberModel');
 const cloudinary = require('./../cloudinary');
 
 exports.createChannel = catchAsync(async (req, res, next) => {
