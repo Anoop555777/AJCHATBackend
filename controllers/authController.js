@@ -82,7 +82,7 @@ async function sendVerifyToken(user, res, next) {
   //   'host'
   // )}/api/v1/auth/verification/${verifiedToken}`;
 
-  const sendVerifyToken = `http://localhost:5173/verification/${verifiedToken}`;
+  const sendVerifyToken = `https://ajchat.vercel.app/verification/${verifiedToken}`;
 
   try {
     await new Email(user, sendVerifyToken).sendVerify();
@@ -269,7 +269,7 @@ exports.forgetPassword = catchAsync(async (req, res, next) => {
 
   //send it to user's email
 
-  const resetURL = `http://localhost:5173/resetpassword/${resetToken}`;
+  const resetURL = `https://ajchat.vercel.app/resetpassword/${resetToken}`;
 
   try {
     await new Email(user, resetURL).sendPasswordReset();
