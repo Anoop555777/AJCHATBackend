@@ -11,7 +11,7 @@ const userRouter = require('./routes/userRouter');
 
 app.use(
   cors({
-    origin: 'ajchat.vercel.app', // Vite dev server
+    origin: 'https://ajchat.vercel.app', // Vite dev server
     credentials: true,
   })
 );

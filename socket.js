@@ -4,7 +4,7 @@ let io;
 function initSocket(server) {
   io = new Server(server, {
     cors: {
-      origin: 'ajchat.vercel.app',
+      origin: 'https://ajchat.vercel.app',
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       credentials: true,
     },
