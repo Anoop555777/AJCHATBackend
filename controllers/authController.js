@@ -1,13 +1,10 @@
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('./../utils/appError');
-// const SentOTP = require('../utils/sentOtp');
 const User = require('../models/userModel');
 const jwt = require('jsonwebtoken');
 const util = require('util');
 const crypto = require('crypto');
 const Email = require('../utils/email');
-
-// const otpStore = {};
 
 const tokenGenerater = function (id) {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
