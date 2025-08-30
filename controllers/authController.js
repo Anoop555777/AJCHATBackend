@@ -1,12 +1,11 @@
 const catchAsync = require('../utils/catchAsync');
-const AppError = require('../utils/appError');
+const AppError = require('./../utils/appError');
 // const SentOTP = require('../utils/sentOtp');
 const User = require('../models/userModel');
 const jwt = require('jsonwebtoken');
 const util = require('util');
 const crypto = require('crypto');
 const Email = require('../utils/email');
-const ChannelMember = require('../models/channelMemberModel');
 
 // const otpStore = {};
 
