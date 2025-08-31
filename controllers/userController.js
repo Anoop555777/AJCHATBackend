@@ -64,7 +64,10 @@ exports.userMe = catchAsync(async (req, res, next) => {
 
   if (req.body.fullname) user.fullname = req.body.fullname;
 
-  await Promise.all([deleteOldAvatarPromise, user.save()]);
+  await Promise.all([
+    deleteOldAvatarPromise,
+    user.save({ validateBeforeSave: false }),
+  ]);
 
   return res.status(200).json({
     status: 'success',
